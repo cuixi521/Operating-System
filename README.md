@@ -1,3 +1,3 @@
 # Operating-System
-some basic algorithms on Linux
-Compile by using Ubuntu
+- Some basic algorithms on Linux
+- Compile by using Ubuntu
