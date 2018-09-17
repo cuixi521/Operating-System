@@ -1,0 +1,4 @@
+How to compile:
+Ubuntu:
+gcc -pthread -o bank banker.c
+./bank #avilable1 #avilable2 #avolable3 
