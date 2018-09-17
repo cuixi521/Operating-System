@@ -10,11 +10,28 @@ Implement the following APIs (in a shared library) for obtaining and releasing a
 • void release_pid(int pid)—Releases a pid
 
 How to compile:
-
-Q1: 
+Q1: on Ubuntu
 gcc -fPIC -shared -o libpid.so Q1.cpp
 gcc -o test test.cpp -l pid -L. -W1,-rpath=./
 ./test
 
+Problem2: 
+The Collatz conjecture concerns what happens when we take any positive integer n and apply the following algorithm:
 
+n=n/2 if n is even;
+n=3*n+1 if n is odd.
 
+The conjecture states that when this algorithm is continually applied, all positive integers will eventually reach 
+1. For example, if n = 35, the sequence is
+35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1
+Write a C program using the fork() system call that generates this sequence in the child processes. 
+The starting number will be provided from the command line. 
+For example, if 8 is passed as a parameter on the command line, the next child process will output 8, its child will output 4 and so on. 
+Because the parent and child processes have their own copies of the data, it will be necessary for the childs to output the sequence. 
+Have the parents invoke the wait() call to wait for the child processes to complete before exiting the program. 
+Perform necessary error checking to ensure that a positive integer is passed on the command line.
+
+How to compile: on Ubuntu
+Q2:
+gcc Q2.cpp
+./a.out
