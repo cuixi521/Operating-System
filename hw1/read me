@@ -1,0 +1,20 @@
+Problem1: 
+An operating system’s pid manager is responsible for managing process identifiers. 
+When a process is first created, it is assigned a unique pid by the pid manager. 
+The pid is returned to the pid manager when the process completes execution, and the manager may later reassign this pid. 
+What is most important here is to recognize that process identifiers must be unique; no two active processes can have the same pid.
+
+Implement the following APIs (in a shared library) for obtaining and releasing a pid:
+• int allocate_map(void)—Creates and initializes a data structure for representing pids; returns -1 if unsuccessful, 1 if successful
+• int allocate_pid(void)—Allocates and returns a pid; returns -1 if unable to allocate a pid (all pids are in use)
+• void release_pid(int pid)—Releases a pid
+
+How to compile:
+
+Q1: 
+gcc -fPIC -shared -o libpid.so Q1.cpp
+gcc -o test test.cpp -l pid -L. -W1,-rpath=./
+./test
+
+
+
