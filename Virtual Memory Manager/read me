@@ -1,0 +1,4 @@
+How to compile on Ubuntu:
+use commend:
+gcc vm.c
+./a.out
